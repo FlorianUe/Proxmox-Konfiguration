@@ -77,3 +77,24 @@ Inhalt:
 ```
 [smtp.strato.de]:465 BENUTZERNAME:PASSWORT
 ```
+
+Berechtigungen anpassen und die Passwort-Datei in Binärform formatieren:
+```
+chmod 600 /etc/postfix/sasl_passwd
+```
+```
+postmap /etc/postfix/sasl_passwd
+```
+
+Für die Authentifizierung benötigtes Paket installieren und Postfix neustarten:
+```
+apt install libsasl2-modules
+```
+```
+service postfix restart
+```
+
+Test E-Mail verschicken:
+```
+echo "Test" | mail -s "Test Betreff" meine@email.de 
+```
