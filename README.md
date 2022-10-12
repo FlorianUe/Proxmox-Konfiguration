@@ -80,10 +80,10 @@ Inhalt:
 
 Berechtigungen anpassen und die Passwort-Datei in Binärform formatieren:
 ```
-chmod 600 /etc/postfix/sasl_passwd
+chmod 600 /etc/postfix/relay_passwd
 ```
 ```
-postmap /etc/postfix/sasl_passwd
+postmap /etc/postfix/relay_passwd
 ```
 
 Für die Authentifizierung benötigtes Paket installieren und Postfix neustarten:
